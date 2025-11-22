@@ -7,67 +7,57 @@ import { ArrowDown, Play, Pause, Volume2, Repeat } from "lucide-react";
 const timelineData = [
   {
     id: 1,
-    title: "Nosso Início",
-    year: "2000s",
+    title: "Aconchego",
+    year: "2018",
     image: "/cinema.jpg",
-    text: "Aquelas primeiras lembranças: seu colo, suas histórias antes de dormir e o cheirinho de domingo.",
+    text: "Os melhores momentos se moldam juntos, com você ao nosso lado",
   },
   {
     id: 2,
     title: "Aprendizados",
-    year: "Infância",
+    year: "2024",
     image: "/2024.jpg",
-    text: "Você me ensinou a importância da honestidade, da coragem e do sorriso em dias difíceis.",
+    text: "A cada ano que passa nos tornamos mais fortes e aprendemos juntos.",
   },
   {
     id: 3,
-    title: "Viagens e Risadas",
-    year: "Adolescência",
+    title: "Momentos",
+    year: "2024",
     image: "/festajunina.jpg",
-    text: "As viagens que viraram histórias — e as histórias que viraram piadas internas da família.",
+    text: "Você nos ensina o valor da união e dos momentos .",
   },
   {
     id: 4,
-    title: "O Cotidiano que Importa",
-    year: "Hoje",
+    title: "Os pequenos gestos",
+    year: "2024",
     image: "/levi.jpg",
-    text: "Os pequenos gestos: café na hora certa, recados e abraços que salvam o dia.",
+    text: "Seu coração é enorme e dentro dele mora muita gente.",
   },
   {
     id: 5,
-    title: "Novo Capítulo",
-    year: "2020s",
+    title: "Conquistas",
+    year: "2024",
     image: "/formatura.jpg",
-    text: "Crescemos, erramos, aprendemos e seguimos juntos.",
+    text: "Cada conquista nossa, mostra como você nos criou bem.",
   },
   {
     id: 6,
     title: "Família Sempre",
-    year: "Hoje",
+    year: "2024",
     image: "/natal.jpg",
-    text: "Quando estamos juntos, tudo faz sentido.",
+    text: "Cada natal que passamos, representa nossa união",
   },
   {
     id: 7,
     title: "Celebrando a Vida",
     year: "2025",
     image: "/niver2025.jpg",
-    text: "Mais um ano, mais uma página linda da sua história 💖",
+    text: "As celebrações mostram como você é importante em nossa vida",
   },
 ];
 
 // PLAYER GLOBAL
 const globalMusic = "/PontesIndestrutíveis.mp3";
-
-// MENSAGEM FINAL
-const finalMessage = `
-Mãe, obrigado por cada cuidado, cada palavra, cada gesto.
-Você é meu exemplo, meu porto seguro e minha maior força.
-Eu te amo além das palavras — feliz aniversário! 💖
-`;
-
-// ÁUDIO FINAL OPCIONAL
-const finalAudio = "/mensagemfinal.mp3";
 
 export default function RetrospectivaAniversarioMae() {
   const timelineRef = useRef(null);
@@ -157,8 +147,8 @@ export default function RetrospectivaAniversarioMae() {
           </h1>
 
           <p className="mt-4 text-lg md:text-xl max-w-2xl mx-auto text-[#5b2c5a]/90">
-            Hoje eu quero celebrar você, sua história e tudo o que você fez por mim.
-            Preparei uma retrospectiva cheia de carinho.
+            Hoje queremos celebrar você, sua história e tudo o que você fez por nós.
+            Preparamos uma retrospectiva cheia de carinho.
           </p>
 
           <div className="mt-8 flex items-center justify-center gap-4">
@@ -231,52 +221,6 @@ export default function RetrospectivaAniversarioMae() {
           </div>
         </div>
       </main>
-
-      {/* === SEÇÃO FINAL === */}
-      <motion.section
-        initial={{ opacity: 0, scale: 0.98 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.7 }}
-        className="mt-16 bg-[#fff0f8] rounded-3xl p-10 mx-6 md:mx-24 text-center shadow-lg"
-      >
-        <h3 className="text-3xl font-semibold text-[#5b2c5a] mb-4">De mim para você 💝</h3>
-
-        <p className="max-w-3xl mx-auto text-[#444] text-lg leading-relaxed whitespace-pre-line mb-6">
-          {finalMessage}
-        </p>
-
-        <div className="flex items-center justify-center gap-4">
-          <audio ref={finalAudioRef} src={finalAudio} preload="none" />
-
-          <button
-            onClick={toggleFinalPlay}
-            className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-[#d880c0] text-white font-semibold shadow"
-          >
-            {finalPlaying ? <Pause size={16} /> : <Play size={16} />}
-            Ouvir minha mensagem
-          </button>
-
-          <a
-            href={finalAudio}
-            download
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white text-[#5b2c5a] font-medium shadow"
-          >
-            <Repeat size={16} />
-            Baixar áudio
-          </a>
-        </div>
-
-        <div className="mt-6">
-          <button
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="px-4 py-2 rounded-lg bg-white font-medium shadow"
-          >
-            Voltar ao topo
-          </button>
-        </div>
-      </motion.section>
-
       <footer className="py-8 text-center text-sm text-[#6b486d]">
         Criado com amor 💜
       </footer>
